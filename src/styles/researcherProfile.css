@@ -1,0 +1,47 @@
+.mainProfileContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profileContainer {
+  width: 60%;
+}
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profileImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.profileImage .iconCircle {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: rgba(178, 18, 34, 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.logout {
+  width: 19px;
+  height: 20px;
+  color: rgba(249, 249, 249, 1);
+  position: absolute;
+}
+.edit {
+  width: 17px;
+  height: 18px;
+  color: rgba(249, 249, 249, 1);
+  position: absolute;
+}

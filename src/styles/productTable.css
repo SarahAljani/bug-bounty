@@ -1,0 +1,25 @@
+.tableLinks a {
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: underline;
+}
+.tableLinks a:hover {
+  color: rgba(178, 18, 34, 1) !important;
+}
+.tableLinks a:visited,
+.tableLinks a:active {
+  color: rgba(61, 60, 66, 1);
+}
+.minproductTable Td {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(61, 60, 66, 1);
+}
+.minproductTable Th {
+  color: rgba(178, 18, 34, 1);
+  font-size: 20px;
+  font-weight: 800;
+}
+.min-thead-border {
+  border-bottom: 1px solid rgba(156, 163, 175, 1); /* Add a bottom border to the header */
+}

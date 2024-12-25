@@ -1,0 +1,85 @@
+.companyCardsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  row-gap: 20px;
+}
+.companyCard {
+  padding: 20px 15px;
+  width: 280px;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+/*  ------- heeder of card sections --------- */
+.cardHeader {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardTitleLogo {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+.cardLogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.userName {
+  font-family: "Zain";
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 18px;
+}
+.domain {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+}
+.companyCard a {
+  color: rgba(29, 29, 27, 1);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+.companyCard a:enabled,
+.companyCard a:visited {
+  color: rgba(29, 29, 27, 1);
+}
+.companyCard a:hover {
+  color: rgba(178, 18, 34, 1);
+}
+.companyCard p {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 400;
+}
+.demInfos {
+  display: flex;
+  column-gap: 45px;
+}
+.icon {
+  color: rgba(178, 18, 34, 1);
+  width: 21px;
+  height: 21px;
+}
+.InfosCilds {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  column-gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}

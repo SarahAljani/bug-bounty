@@ -1,0 +1,59 @@
+.profileStyles {
+  border-radius: 50%;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(178, 18, 34, 1);
+  border: 1px solid #fff;
+  background-color: #f7c5c5;
+  text-transform: uppercase;
+  outline-color: rgba(178, 18, 34, 1);
+  outline-width: 3px;
+  outline-offset: 2px;
+  outline-style: outset;
+  letter-spacing: 2px;
+  text-align: center;
+  /* Add rounded box-shadow */
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.imageStyles {
+  border-radius: 50%; /* Ensures the image is round */
+  object-fit: cover;
+  /* Apply rounded box shadow */
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+}
+.logoStyles {
+  border-radius: 50%; /* Ensures the image is round */
+  object-fit: cover;
+}
+
+.profile {
+  position: relative;
+  height: auto;
+  /* If you want shadow on the profile wrapper */
+}
+
+.profile .iconCircle {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: rgba(178, 18, 34, 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.edit {
+  width: 17px;
+  height: 18px;
+  color: rgba(249, 249, 249, 1);
+}

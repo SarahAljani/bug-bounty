@@ -1,0 +1,35 @@
+Table.Td a {
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: underline;
+}
+Table.Td a:hover {
+  color: rgba(178, 18, 34, 1);
+}
+Table.Td a:visited,
+Table.Td a:active {
+  color: rgba(61, 60, 66, 1);
+}
+Td {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(61, 60, 66, 1);
+}
+Th {
+  color: rgba(156, 156, 156, 1);
+  font-size: 20px;
+  font-weight: 800;
+}
+/* Inside productTable.css */
+.thead-border {
+  border-bottom: 1px solid rgba(238, 238, 238, 1); /* Add a bottom border to the header */
+}
+a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(61, 60, 66, 1);
+}
+a:hover{
+  color: #b21222;
+}

@@ -1,0 +1,96 @@
+.researcherCardsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  row-gap: 20px;
+}
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 0px 70px;
+    width: 100%;
+}
+.chartsDiv {
+  width: 360px;
+  height: 260px;
+  padding: 10px 0px 0px 0px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.342);
+  background-color: rgba(255, 255, 255, 1);
+}
+.researcherCard {
+  padding: 10px 15px;
+  width: 280px;
+  height: 311px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+/*  ------- heeder of card sections --------- */
+.cardHeader {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardTitleLogo {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+.cardImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 1px 2px 5px 1px #00000091, -1px 0px 5px 0px #00000091;
+}
+.userName {
+  font-family: "Zain";
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 18px;
+}
+.domain {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+}
+
+.researcherCard domain {
+  color: rgba(29, 29, 27, 1);
+}
+.researcherCard p {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 400;
+}
+.demInfos {
+  display: flex;
+  column-gap: 45px;
+}
+.icon {
+  color: rgba(178, 18, 34, 1);
+  width: 21px;
+  height: 21px;
+}
+.InfosCilds {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  column-gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
