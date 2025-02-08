@@ -1,16 +1,18 @@
 import { useContext, useState } from "react";
 import { useForm } from "@mantine/form";
-import { TextInput, PasswordInput, Button, Text } from "@mantine/core";
+import { TextInput, PasswordInput, Button, Text, Loader } from "@mantine/core";
 import { Mail } from "tabler-icons-react";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { updateLoggedIn } from "../../redux/actions/aurhActions";
 import "../../styles/LoginRegister.module.css";
-import { login } from "../../api/login";
 import { useNavigate } from "react-router-dom";
 import { LoginRegisterContext } from "../../App";
+import { login } from "./../../api/login";
 
 const LoginForm = ({ url }) => {
+  const [loading, setLoading] = useState(false);
+
   const { loginRegister, setLoginRegister } = useContext(LoginRegisterContext);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -31,6 +33,7 @@ const LoginForm = ({ url }) => {
 
   // Handle form submission
   const handleSubmit = async (values) => {
+    setLoading(true); // Start loading
     try {
       const data = {
         email: values.email,
@@ -60,6 +63,8 @@ const LoginForm = ({ url }) => {
       }
     } catch (error) {
       console.error("Error during login:", error);
+    } finally {
+      setLoading(false); // End loading whether successful or not
     }
   };
   const handleToggle = () => {
@@ -158,7 +163,11 @@ const LoginForm = ({ url }) => {
               fontWeight: "800",
             }}
           >
-            تسجيل دخول
+            {loading ? (
+              <Loader color="rgba(255, 255, 255, 1)" type="dots" />
+            ) : (
+              "تسجيل الدخول"
+            )}
           </Button>
         </div>
       </form>

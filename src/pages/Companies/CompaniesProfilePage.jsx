@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom"; // Moved the import to the top
 import { useDispatch } from "react-redux";
 import { MdLogout } from "react-icons/md";
 import { useSelector } from "react-redux";
-import { updateUser } from "../../redux/actions/usersActions.jsx";
 import { useEffect, useState } from "react";
 import { LogoutModal } from "../../components/modals/LogoutModal.jsx";
 import "../../styles/researcherProfile.css";

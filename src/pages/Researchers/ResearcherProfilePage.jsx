@@ -1,6 +1,6 @@
 import ImageProfile from "../../components/images/ImageProfile.jsx";
 import { useForm, yupResolver } from "@mantine/form";
-import { TextInput, Button, Textarea } from "@mantine/core";
+import { TextInput, Button, Textarea, Loader } from "@mantine/core";
 import { User, Mail, Phone } from "tabler-icons-react";
 import { useMediaQuery } from "@mantine/hooks";
 import * as yup from "yup";
@@ -18,6 +18,7 @@ import {
 } from "../../api/researcherHomePage.js";
 import { updateResearcherProfile } from "../../redux/actions/researcherDataAction.jsx";
 import { logout } from "../../api/logout.js";
+import Spinner from "react-bootstrap/Spinner"; // Import React Bootstrap Spinner
 const schema = yup.object().shape({
   name: yup
     .string()
@@ -47,6 +48,7 @@ const ResearcherProfilePage = () => {
     width: "100px",
     height: "100px",
   };
+  const [loading, setLoading] = useState(false); // Loading state
   const [uploadedImage, setUploadedImage] = useState(null);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -121,6 +123,7 @@ const ResearcherProfilePage = () => {
   // Handle form submission (no need for manual Yup validation here)
 
   const handleSubmit = async (values) => {
+    setLoading(true); // Start loading
     try {
       // Create a new FormData instance
       const formData = new FormData();
@@ -145,6 +148,8 @@ const ResearcherProfilePage = () => {
       );
     } catch (error) {
       console.error("Error during registration:", error);
+    } finally {
+      setLoading(false); // Stop loading regardless of success or error
     }
   };
 
@@ -241,7 +246,11 @@ const ResearcherProfilePage = () => {
             }}
             onClick={handleSubmit}
           >
-            حفظ التغييرات{" "}
+            {loading ? (
+              <Loader color="rgba(255, 255, 255, 1)" type="dots" />
+            ) : (
+              "حفظ التغييرات"
+            )}
           </Button>
         </form>
         <LogoutModal

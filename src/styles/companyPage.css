@@ -11,15 +11,9 @@
   justify-content: space-between;
   column-gap: 40px;
 }
-.detailscp {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  row-gap: 25px;
-}
 .detailsrp {
   display: flex;
+  width: 40%;
   flex-direction: column;
   justify-content: start;
   align-items: start;
@@ -44,7 +38,9 @@
   height: 70px;
 }
 .company-image {
-  width: 50%;
+  width: 60%;
+}
+.ci {
 }
 .iconcp {
   width: 30px;

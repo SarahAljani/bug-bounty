@@ -1,5 +1,11 @@
 import { useForm, yupResolver } from "@mantine/form";
-import { TextInput, PasswordInput, Checkbox, Button } from "@mantine/core";
+import {
+  TextInput,
+  PasswordInput,
+  Checkbox,
+  Button,
+  Loader,
+} from "@mantine/core";
 import { User, Mail, Phone } from "tabler-icons-react";
 import { useMediaQuery } from "@mantine/hooks";
 import * as yup from "yup";
@@ -8,7 +14,7 @@ import { useNavigate } from "react-router-dom"; // Moved the import to the top
 import "../../styles/LoginRegister.module.css";
 import { researcherRegister } from "../../api/researcherRegister";
 import { researchers } from "./../../data/researchers";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LoginRegisterContext } from "../../App";
 
 // Define the Yup validation schema
@@ -42,6 +48,7 @@ const schema = yup.object().shape({
 });
 
 const ResearcherRegisterForm = () => {
+  const [loading, setLoading] = useState(false); // Loading state
   const navigate = useNavigate(); // Initialize the navigation hook
   const { loginRegister, setLoginRegister } = useContext(LoginRegisterContext);
   // Mantine form with Yup validation resolver
@@ -83,6 +90,7 @@ const ResearcherRegisterForm = () => {
   //   navigate("register-code");
   // };
   const onSubmit = async (values) => {
+    setLoading(true);
     try {
       const researcherData = {
         name: values.name,
@@ -100,6 +108,8 @@ const ResearcherRegisterForm = () => {
       // dispatch(updateLoggedIn(true));
     } catch (error) {
       console.error("Error during registration:", error);
+    } finally {
+      setLoading(false); // End loading whether successful or not
     }
   };
   const handleToggle = () => {
@@ -196,7 +206,11 @@ const ResearcherRegisterForm = () => {
             }}
             onClick={handleToggle}
           >
-            تسجيل الدخول
+            {loading ? (
+              <Loader color="rgba(255, 255, 255, 1)" type="dots" />
+            ) : (
+              "تسجيل الدخول"
+            )}
           </Button>
           <Button
             type="submit"

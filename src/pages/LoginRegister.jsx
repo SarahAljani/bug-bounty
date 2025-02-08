@@ -10,6 +10,7 @@ const LoginRegister = () => {
   const isLargeScreen = useMediaQuery("(min-width: 900px)");
   const [defVal, setDefVal] = useState("reasercher");
   // const [loginRegister, setLoginRegister] = useState("login");
+  const isSmallScreen = useMediaQuery("(max-width: 500px)");
   const { loginRegister, setLoginRegister } = useContext(LoginRegisterContext);
   const style = {
     height: "35px",
@@ -19,7 +20,7 @@ const LoginRegister = () => {
     borderBottom: "1px solid rgba(162, 168, 180, 1)",
     color: "black",
     fontFamily: "Zain",
-    fontSize: "20px",
+    fontSize: isSmallScreen ? "18px" : "20px",
     fontWeight: "800",
     padding: "0",
   };
@@ -45,6 +46,8 @@ const LoginRegister = () => {
           display: "flex",
           width: isLargeScreen ? "70%" : "100%",
           flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
           borderRadius: "10px",
           boxShadow: "0px 4px 10px 0px #00000037 ",
           backgroundColor: "#fff",

@@ -2,25 +2,32 @@
   margin: 0;
   padding: 0;
 }
-.tab{
-  width: 100px;
+.tab {
+  width: auto;
+  text-align: center;
+}
+#mantine-rqx18hvs3-tab-company {
+  margin: 0 !important;
+  min-width: 100px;
 }
 .tab[data-active] {
   z-index: 1;
-  border: 1px solid rgba(178, 18, 34, 1)!important;
+  border: 1px solid rgba(178, 18, 34, 1) !important;
   border-radius: 8px;
   height: 35px;
   margin: 10px 20px;
   padding: 10px 20px;
   color: rgba(178, 18, 34, 1) !important;
-  
 }
-
 
 .main__form {
   align-self: flex-start;
   min-height: 100%; /* Ensure it takes up at least the height of the image */
 }
-.resetpass{
+.resetpass {
   color: black;
+}
+.resetpass:hover {
+  color: rgba(178, 18, 34, 1) !important;
+  text-decoration: underline;
 }
